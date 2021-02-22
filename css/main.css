@@ -7,6 +7,9 @@ body {
   font-family: 'lato', sans-serif !important;
   color: #fff; }
 
+a {
+  text-decoration: none !important; }
+
 header {
   position: relative;
   width: 100%;
@@ -39,5 +42,38 @@ header {
     @media screen and (max-width: 434px) {
       .hero p {
         font-size: .5rem; } }
+  .hero .btn-arrow {
+    position: absolute;
+    bottom: 35px; }
+
+#about #about-img {
+  width: 300px;
+  border-radius: 50%; }
+#about .display-5 {
+  font-size: 2rem !important; }
+#about .about-title {
+  position: relative; }
+  #about .about-title::after {
+    content: '';
+    position: absolute;
+    background: #673ab7;
+    width: 75px;
+    height: 1px;
+    bottom: -8px;
+    left: 49%;
+    margin-left: -45px; }
+  #about .about-title::before {
+    content: '';
+    position: absolute;
+    background: #9c27b0;
+    width: 75px;
+    height: 1px;
+    bottom: -13px;
+    left: 50%;
+    margin-left: -30px; }
+#about p {
+  font-size: .9rem; }
+  #about p .text-link {
+    color: #673ab7; }
 
 /*# sourceMappingURL=main.css.map */

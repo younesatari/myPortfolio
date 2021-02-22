@@ -11,6 +11,10 @@ body {
 	color:#fff;	
 }
 
+a {
+   text-decoration: none !important;
+}
+
 header {
    position: relative;
    width: 100%;
@@ -65,7 +69,55 @@ header {
       @include smallScreen {
          font-size: .5rem;
       }
+   }
 
-      
+   .btn-arrow {
+      position: absolute;
+      bottom:35px;
+   }
+}
+
+#about {
+   #about-img {
+      width:300px;
+      border-radius: 50%;
+   }
+
+   .display-5 {
+      font-size: 2rem !important;
+   }
+
+   .about-title {
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         background: rgba(103, 58, 183,1);
+         width: 75px;
+         height: 1px;
+         bottom: -8px;
+         left: 49%;
+         margin-left: -45px;
+      }
+
+      &::before {
+         content: '';
+         position: absolute;
+         background: rgba(156, 39, 176,1);
+         width: 75px;
+         height: 1px;
+         bottom: -13px;
+         left: 50%;
+         margin-left: -30px;
+      }
+   }
+
+   p {
+      .text-link {
+         color:rgba(103, 58, 183,1);
+      }
+
+      font-size: .9rem;
    }
 }
