@@ -1,4 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+
 @import "media-queries";
+
+$dark: #616161;
+$font-p: .9rem;
+$title: 2rem !important;
+
+%title-shared {
+   position: relative;
+   font-size: $title;
+}
+
+%para-shared {
+   font-size: $font-p;
+}
 
 * {
 	margin: 0;
@@ -83,13 +98,8 @@ header {
       border-radius: 50%;
    }
 
-   .display-5 {
-      font-size: 2rem !important;
-   }
-
    .about-title {
-      position: relative;
-
+      @extend %title-shared;
       &::after {
          content: '';
          position: absolute;
@@ -100,7 +110,7 @@ header {
          left: 49%;
          margin-left: -45px;
       }
-
+   
       &::before {
          content: '';
          position: absolute;
@@ -111,6 +121,7 @@ header {
          left: 50%;
          margin-left: -30px;
       }
+      color:#616161;
    }
 
    p {
@@ -118,6 +129,63 @@ header {
          color:rgba(103, 58, 183,1);
       }
 
-      font-size: .9rem;
+      @extend %para-shared;
+      color:$dark;
    }
+}
+
+#experience {
+   background-image: linear-gradient(to right bottom, 
+	 rgba(156, 39, 176,0.9), 
+	 rgba(103, 58, 183,0.9)),
+	   url('../img/bg.jpg');
+   background-repeat: no-repeat;   
+   background-size: cover;   
+   background-attachment: fixed;
+   background-clip: bottom center;
+   .experience-title {
+      @extend %title-shared;
+      color: #fff;
+      &::after {
+         content: '';
+         position: absolute;
+         background: #fff;
+         width: 75px;
+         height: 1px;
+         bottom: -8px;
+         left: 49%;
+         margin-left: -45px;
+      }
+   
+      &::before {
+         content: '';
+         position: absolute;
+         background: #fff;
+         width: 75px;
+         height: 1px;
+         bottom: -13px;
+         left: 50%;
+         margin-left: -30px;
+      }
+   }
+
+   .exp-text {
+      margin-bottom: 100px !important;
+   }
+
+   .tech-stack {
+      h4 {
+         font-weight: 300;
+      }
+   }
+
+   p {
+      @extend %para-shared;
+      color: #fff;
+   }
+
+   .techs img{
+      width: 65px;
+   }
+
 }
