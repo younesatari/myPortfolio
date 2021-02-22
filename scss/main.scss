@@ -1,0 +1,71 @@
+@import "media-queries";
+
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box !important;
+}
+
+body {
+	font-family: 'lato', sans-serif !important;  
+	color:#fff;	
+}
+
+header {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background-image: linear-gradient(to right bottom, 
+	 rgba(156, 39, 176,0.9), 
+	 rgba(103, 58, 183,0.9)),
+	   url('../img/nat-7.jpg');
+   background-repeat: no-repeat;   
+   background-size: cover;   
+   background-clip: bottom center;
+
+   #navigation {
+      img {
+         width:37px;
+      }
+
+      .navbar-nav {
+         li {
+            a {
+               color: #fff !important;
+               font-size: .8rem;
+            }
+
+            &:hover {
+               border-bottom: 1px solid #fff;
+            }
+         }
+      }
+   }
+}
+
+.hero {
+   margin-top: 175px;
+
+   h1 {
+      font-weight: 600;
+   }
+
+   p {
+      letter-spacing: .3rem;
+      font-size: .9rem;
+
+      @include largeScreen {
+         font-size: .75rem;
+      }
+
+      @include tablet {
+         font-size: .6rem;
+      }
+
+      @include smallScreen {
+         font-size: .5rem;
+      }
+
+      
+   }
+}
