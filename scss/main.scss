@@ -2,23 +2,21 @@
 
 @import "media-queries";
 
-$dark: #616161;
-$font-p: .9rem;
-$title: 2rem !important;
+/* Variables */
+$dark-color: #616161;
+$section-text-size: 1.1rem;
+$section-title-size: 2rem !important;
 
-%title-shared {
+%section-title-shared {
    position: relative;
-   font-size: $title;
-}
-
-%para-shared {
-   font-size: $font-p;
+   font-size: $section-title-size;
 }
 
 * {
 	margin: 0;
 	padding:0;
 	box-sizing: border-box !important;
+   line-height: 1.6;
 }
 
 body {
@@ -51,7 +49,7 @@ header {
          li {
             a {
                color: #fff !important;
-               font-size: .8rem;
+               font-size: 1rem;
             }
 
             &:hover {
@@ -71,14 +69,14 @@ header {
 
    p {
       letter-spacing: .3rem;
-      font-size: .9rem;
+      font-size: 1rem;
 
       @include largeScreen {
-         font-size: .75rem;
+         font-size: .9rem;
       }
 
       @include tablet {
-         font-size: .6rem;
+         font-size: .8rem;
       }
 
       @include smallScreen {
@@ -99,9 +97,9 @@ header {
    }
 
    .about-title {
-      @extend %title-shared;
+      @extend %section-title-shared;
       &::after {
-         content: '';
+         content: "";
          position: absolute;
          background: rgba(103, 58, 183,1);
          width: 75px;
@@ -112,7 +110,7 @@ header {
       }
    
       &::before {
-         content: '';
+         content: "";
          position: absolute;
          background: rgba(156, 39, 176,1);
          width: 75px;
@@ -129,8 +127,8 @@ header {
          color:rgba(103, 58, 183,1);
       }
 
-      @extend %para-shared;
-      color:$dark;
+      font-size: $section-text-size;
+      color:$dark-color;
    }
 }
 
@@ -144,7 +142,7 @@ header {
    background-attachment: fixed;
    background-clip: bottom center;
    .experience-title {
-      @extend %title-shared;
+      @extend %section-title-shared;
       color: #fff;
       &::after {
          content: '';
@@ -180,12 +178,17 @@ header {
    }
 
    p {
-      @extend %para-shared;
       color: #fff;
+      font-size: $section-text-size;
    }
 
    .techs img{
-      width: 65px;
+      width: 50px;
+      transition: transform .3s;
+      
+      &:hover {
+         transform: scale(1.2);
+      }
    }
 
 }

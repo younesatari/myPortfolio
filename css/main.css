@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
+/* Variables */
 #about .about-title, #experience .experience-title {
   position: relative;
   font-size: 2rem !important; }
 
-#about p, #experience p {
-  font-size: 0.9rem; }
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important; }
+  box-sizing: border-box !important;
+  line-height: 1.6; }
 
 body {
   font-family: 'lato', sans-serif !important;
@@ -30,7 +29,7 @@ header {
     width: 37px; }
   header #navigation .navbar-nav li a {
     color: #fff !important;
-    font-size: .8rem; }
+    font-size: 1rem; }
   header #navigation .navbar-nav li:hover {
     border-bottom: 1px solid #fff; }
 
@@ -40,13 +39,13 @@ header {
     font-weight: 600; }
   .hero p {
     letter-spacing: .3rem;
-    font-size: .9rem; }
+    font-size: 1rem; }
     @media screen and (max-width: 1200px) {
       .hero p {
-        font-size: .75rem; } }
+        font-size: .9rem; } }
     @media screen and (max-width: 895px) {
       .hero p {
-        font-size: .6rem; } }
+        font-size: .8rem; } }
     @media screen and (max-width: 434px) {
       .hero p {
         font-size: .5rem; } }
@@ -60,7 +59,7 @@ header {
 #about .about-title {
   color: #616161; }
   #about .about-title::after {
-    content: '';
+    content: "";
     position: absolute;
     background: #673ab7;
     width: 75px;
@@ -69,7 +68,7 @@ header {
     left: 49%;
     margin-left: -45px; }
   #about .about-title::before {
-    content: '';
+    content: "";
     position: absolute;
     background: #9c27b0;
     width: 75px;
@@ -78,6 +77,7 @@ header {
     left: 50%;
     margin-left: -30px; }
 #about p {
+  font-size: 1.1rem;
   color: #616161; }
   #about p .text-link {
     color: #673ab7; }
@@ -113,8 +113,12 @@ header {
   #experience .tech-stack h4 {
     font-weight: 300; }
   #experience p {
-    color: #fff; }
+    color: #fff;
+    font-size: 1.1rem; }
   #experience .techs img {
-    width: 65px; }
+    width: 50px;
+    transition: transform .3s; }
+    #experience .techs img:hover {
+      transform: scale(1.2); }
 
 /*# sourceMappingURL=main.css.map */
