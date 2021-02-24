@@ -12,6 +12,30 @@ $section-title-size: 2rem !important;
    font-size: $section-title-size;
 }
 
+%title-style-shared {
+   &::after {
+      content: "";
+      position: absolute;
+      background: rgba(103, 58, 183,1);
+      width: 75px;
+      height: 1px;
+      bottom: -8px;
+      left: 49%;
+      margin-left: -45px;
+   }
+
+   &::before {
+      content: "";
+      position: absolute;
+      background: rgba(156, 39, 176,1);
+      width: 75px;
+      height: 1px;
+      bottom: -13px;
+      left: 50%;
+      margin-left: -30px;
+   }
+}
+
 * {
 	margin: 0;
 	padding:0;
@@ -98,27 +122,7 @@ header {
 
    .about-title {
       @extend %section-title-shared;
-      &::after {
-         content: "";
-         position: absolute;
-         background: rgba(103, 58, 183,1);
-         width: 75px;
-         height: 1px;
-         bottom: -8px;
-         left: 49%;
-         margin-left: -45px;
-      }
-   
-      &::before {
-         content: "";
-         position: absolute;
-         background: rgba(156, 39, 176,1);
-         width: 75px;
-         height: 1px;
-         bottom: -13px;
-         left: 50%;
-         margin-left: -30px;
-      }
+      @extend %title-style-shared;
       color:#616161;
    }
 
@@ -191,4 +195,66 @@ header {
       }
    }
 
+}
+
+#work {
+   h1 {
+      @extend %title-style-shared;
+      @extend %section-title-shared;
+      margin-bottom: 80px;
+   }
+
+   .project {
+      padding: 1rem;
+
+      article {
+         position: relative;
+         cursor: pointer;
+
+         .project-img {
+            width: 100%;
+            height: 220px;
+         }
+
+         &:hover .project-info-container{
+            transform: translateY(0) !important;
+            visibility: visible;
+            opacity: 1;
+            transition: all .3s;
+         }
+      }
+
+      .project-info-container {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;  
+         background-image: linear-gradient(to right, 
+	      rgba(156, 39, 176,0.9), 
+	      rgba(103, 58, 183,0.9));
+         transform: translateY(10%) !important;
+         visibility: hidden;
+         opacity: 0;
+
+         .project-info-content {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+
+            .project-name {
+               font-size: 1.5rem;
+            }
+
+            .project-btn {
+               transition: transform .3s;
+               &:hover {
+                  transform: scale(1.1);
+               }
+            }
+         }
+      }
+   }
 }
