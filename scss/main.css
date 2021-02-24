@@ -131,7 +131,8 @@ header {
     cursor: pointer; }
     #work .project article .project-img {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      height: 220px; }
     #work .project article:hover .project-info-container {
       transform: translateY(0) !important;
       visibility: visible;
@@ -154,7 +155,7 @@ header {
       transform: translate(-50%, -50%);
       width: 100%; }
       #work .project .project-info-container .project-info-content .project-name {
-        font-size: 1.5rem !important; }
+        font-size: 1rem !important; }
       #work .project .project-info-container .project-info-content .project-btn {
         transition: transform .3s; }
         #work .project .project-info-container .project-info-content .project-btn:hover {
