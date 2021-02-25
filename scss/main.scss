@@ -53,6 +53,7 @@ body {
 	color:#fff;	
 }
 
+/* HEADER Section */
 header {
    position: relative;
    width: 100%;
@@ -85,7 +86,8 @@ header {
    }
 }
 
-.hero {
+/* HERO Section */
+#hero {
    margin-top: 175px;
 
    h1 {
@@ -115,6 +117,7 @@ header {
    }
 }
 
+/* ABOUT Section */
 #about {
    #about-img {
       width:300px;
@@ -137,6 +140,7 @@ header {
    }
 }
 
+/* EXPERIENCE Section */
 #experience {
    background-image: linear-gradient(to right bottom, 
 	 rgba(156, 39, 176,0.9), 
@@ -198,6 +202,7 @@ header {
 
 }
 
+/* WORK Section */
 #work {
    h1 {
       @extend %title-style-shared;
@@ -256,5 +261,34 @@ header {
             opacity: 1;
          }
       }
+   }
+}
+
+/* CONTACT Section */
+#contact {
+
+   margin: 10rem 0 1.5rem 0;
+
+   a {
+      
+      i {
+         color: rgba(103, 58, 183,1);
+         font-size: 3rem;
+         padding:.1rem;
+         margin:0 .6rem;
+         transition: all .3s;
+
+         &:hover {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+         }
+      }
+   }
+
+   p {
+      font-size: 1.1rem;
    }
 }

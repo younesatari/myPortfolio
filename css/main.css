@@ -36,6 +36,7 @@ body {
   font-family: 'lato', sans-serif !important;
   color: #fff; }
 
+/* HEADER Section */
 header {
   position: relative;
   width: 100%;
@@ -52,26 +53,28 @@ header {
   header #navigation .navbar-nav li:hover {
     border-bottom: 1px solid #fff; }
 
-.hero {
+/* HERO Section */
+#hero {
   margin-top: 175px; }
-  .hero h1 {
+  #hero h1 {
     font-weight: 600; }
-  .hero p {
+  #hero p {
     letter-spacing: .3rem;
     font-size: 1rem; }
     @media screen and (max-width: 1200px) {
-      .hero p {
+      #hero p {
         font-size: .9rem; } }
     @media screen and (max-width: 895px) {
-      .hero p {
+      #hero p {
         font-size: .8rem; } }
     @media screen and (max-width: 434px) {
-      .hero p {
+      #hero p {
         font-size: .5rem; } }
-  .hero .btn-arrow {
+  #hero .btn-arrow {
     position: absolute;
     bottom: 35px; }
 
+/* ABOUT Section */
 #about #about-img {
   width: 300px;
   border-radius: 50%; }
@@ -83,6 +86,7 @@ header {
   #about p .text-link {
     color: #673ab7; }
 
+/* EXPERIENCE Section */
 #experience {
   background-image: linear-gradient(to right bottom, rgba(156, 39, 176, 0.9), rgba(103, 58, 183, 0.9)), url("../img/bg.jpg");
   background-repeat: no-repeat;
@@ -122,6 +126,7 @@ header {
     #experience .techs img:hover {
       transform: scale(1.2); }
 
+/* WORK Section */
 #work h1 {
   margin-bottom: 80px; }
 #work .project {
@@ -157,5 +162,23 @@ header {
       transform: scale(1);
       border-radius: 0;
       opacity: 1; }
+
+/* CONTACT Section */
+#contact {
+  margin: 10rem 0 1.5rem 0; }
+  #contact a i {
+    color: #673ab7;
+    font-size: 3rem;
+    padding: .1rem;
+    margin: 0 .6rem;
+    transition: all .3s; }
+    #contact a i:hover {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); }
+  #contact p {
+    font-size: 1.1rem; }
 
 /*# sourceMappingURL=main.css.map */
