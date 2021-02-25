@@ -44,36 +44,60 @@ header {
   background-image: linear-gradient(to right bottom, rgba(156, 39, 176, 0.9), rgba(103, 58, 183, 0.9)), url("../img/nat-7.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-clip: bottom center; }
+  background-clip: bottom center;
+  /* HERO Section */ }
+  @media screen and (max-width: 768px) {
+    header {
+      height: 80vh !important; } }
+  @media screen and (max-width: 370px) {
+    header {
+      height: 45vh !important; } }
   header #navigation img {
     width: 37px; }
-  header #navigation .navbar-nav li a {
+  header #navigation .navbar-toggler:focus,
+  header #navigation .navbar-toggler:active,
+  header #navigation .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none; }
+  header #navigation .navbar-collapse .navbar-nav li a {
     color: #fff !important;
     font-size: 1rem; }
-  header #navigation .navbar-nav li:hover {
+  header #navigation .navbar-collapse .navbar-nav li:hover {
     border-bottom: 1px solid #fff; }
-
-/* HERO Section */
-#hero {
-  margin-top: 175px; }
-  #hero h1 {
-    font-weight: 600; }
-  #hero p {
-    letter-spacing: .3rem;
-    font-size: 1rem; }
-    @media screen and (max-width: 1200px) {
-      #hero p {
-        font-size: .9rem; } }
-    @media screen and (max-width: 895px) {
-      #hero p {
-        font-size: .8rem; } }
+  header #hero {
+    margin-top: 175px; }
+    @media screen and (max-width: 768px) {
+      header #hero {
+        margin-top: 115px; } }
     @media screen and (max-width: 434px) {
-      #hero p {
-        font-size: .5rem; } }
-  #hero .btn-arrow {
-    position: absolute;
-    bottom: 35px; }
-
+      header #hero {
+        margin-top: 60px; } }
+    header #hero h1 {
+      font-weight: 600; }
+    header #hero p {
+      letter-spacing: .3rem;
+      font-size: 1rem; }
+      @media screen and (max-width: 1200px) {
+        header #hero p {
+          font-size: .9rem; } }
+      @media screen and (max-width: 895px) {
+        header #hero p {
+          font-size: .8rem; } }
+      @media screen and (max-width: 434px) {
+        header #hero p {
+          font-size: .5rem; } }
+    header #hero .btn-arrow {
+      position: absolute;
+      bottom: 35px;
+      animation: arrowUpAndDown 1s infinite; }
+      @media screen and (max-width: 434px) {
+        header #hero .btn-arrow {
+          display: none !important; } }
+@keyframes arrowUpAndDown {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-10%); } }
 /* ABOUT Section */
 #about #about-img {
   width: 300px;
@@ -85,6 +109,9 @@ header {
   color: #616161; }
   #about p .text-link {
     color: #673ab7; }
+  @media screen and (max-width: 768px) {
+    #about p {
+      font-size: 1rem; } }
 
 /* EXPERIENCE Section */
 #experience {
@@ -172,6 +199,9 @@ header {
     padding: .1rem;
     margin: 0 .6rem;
     transition: all .3s; }
+    @media screen and (max-width: 434px) {
+      #contact a i {
+        font-size: 2rem; } }
     #contact a i:hover {
       -webkit-transform: rotate(360deg);
       -moz-transform: rotate(360deg);
@@ -180,5 +210,8 @@ header {
       transform: rotate(360deg); }
   #contact p {
     font-size: 1.1rem; }
+    @media screen and (max-width: 434px) {
+      #contact p {
+        font-size: 1rem; } }
 
 /*# sourceMappingURL=main.css.map */

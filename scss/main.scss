@@ -66,29 +66,54 @@ header {
    background-size: cover;   
    background-clip: bottom center;
 
+   @include screen {
+      height: 80vh !important;
+   }
+
+   @include verySmallScreen {
+      height: 45vh !important;
+   }
+
    #navigation {
+
       img {
          width:37px;
       }
 
-      .navbar-nav {
-         li {
-            a {
-               color: #fff !important;
-               font-size: 1rem;
-            }
+      .navbar-toggler:focus,
+      .navbar-toggler:active,
+      .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+      }
 
-            &:hover {
-               border-bottom: 1px solid #fff;
+      .navbar-collapse {
+         .navbar-nav {
+            li {
+               a {
+                  color: #fff !important;
+                  font-size: 1rem;
+               }
+   
+               &:hover {
+                  border-bottom: 1px solid #fff;
+               }
             }
          }
       }
    }
-}
 
-/* HERO Section */
+   /* HERO Section */
 #hero {
    margin-top: 175px;
+
+   @include screen {
+      margin-top: 115px;
+   }
+
+   @include smallScreen {
+      margin-top: 60px;
+   }
 
    h1 {
       font-weight: 600;
@@ -114,7 +139,23 @@ header {
    .btn-arrow {
       position: absolute;
       bottom:35px;
+      animation: arrowUpAndDown 1s infinite;
+
+      @include smallScreen {
+         display: none !important;
+      }
    }
+
+   @keyframes arrowUpAndDown {
+      0% {
+         transform: translateY(0);
+      }
+
+      100% {
+         transform: translateY(-10%);
+      }
+   }
+}
 }
 
 /* ABOUT Section */
@@ -137,6 +178,8 @@ header {
 
       font-size: $section-text-size;
       color:$dark-color;
+
+      @include screen {font-size: 1rem;}
    }
 }
 
@@ -278,6 +321,8 @@ header {
          margin:0 .6rem;
          transition: all .3s;
 
+         @include smallScreen {font-size: 2rem}
+
          &:hover {
             -webkit-transform: rotate(360deg);
             -moz-transform: rotate(360deg);
@@ -290,5 +335,7 @@ header {
 
    p {
       font-size: 1.1rem;
+      @include smallScreen {font-size: 1rem}
+
    }
 }
