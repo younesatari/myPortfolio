@@ -9,6 +9,7 @@ $section-title-size: 2rem !important;
 $purple-one: rgba(156, 39, 176,0.9);
 $purple-two: rgba(103, 58, 183,0.9);
 
+/* Common Styles */
 %section-title-shared {
    position: relative;
    font-size: $section-title-size;
@@ -40,24 +41,16 @@ $purple-two: rgba(103, 58, 183,0.9);
 
 * {
 	margin: 0;
-	padding:0;
+	padding: 0;
 	box-sizing: border-box !important;
    line-height: 1.6;
    outline: none;
+   text-decoration: none !important;
 }
-
-/*html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}*/
 
 body {
 	font-family: 'lato', sans-serif !important;  
 	color:#fff;	
-}
-
-a {
-   text-decoration: none !important;
 }
 
 header {
@@ -213,13 +206,11 @@ header {
    }
 
    .project {
-      position: relative;
       padding:.2rem !important;
       
       article {
          cursor: pointer;
          position: relative;
-         
          .project-img {
             width: 100%;
             height:100%;
@@ -242,7 +233,7 @@ header {
 
             .project-info-content {
                .project-name {
-                  font-size: 1.8rem !important;
+                  font-size: 1.6rem !important;
                }
 
                .project-techs {

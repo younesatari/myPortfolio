@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
 /* Variables */
+/* Common Styles */
 #about .about-title, #experience .experience-title, #work h1 {
   position: relative;
   font-size: 2rem !important; }
@@ -28,18 +29,12 @@
   padding: 0;
   box-sizing: border-box !important;
   line-height: 1.6;
-  outline: none; }
+  outline: none;
+  text-decoration: none !important; }
 
-/*html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}*/
 body {
   font-family: 'lato', sans-serif !important;
   color: #fff; }
-
-a {
-  text-decoration: none !important; }
 
 header {
   position: relative;
@@ -130,7 +125,6 @@ header {
 #work h1 {
   margin-bottom: 80px; }
 #work .project {
-  position: relative;
   padding: .2rem !important; }
   #work .project article {
     cursor: pointer;
@@ -152,7 +146,7 @@ header {
       border-radius: 50rem 0 50rem 50rem;
       opacity: 0; }
       #work .project article .project-info-container .project-info-content .project-name {
-        font-size: 1.8rem !important; }
+        font-size: 1.6rem !important; }
       #work .project article .project-info-container .project-info-content .project-techs {
         font-size: .8rem; }
       #work .project article .project-info-container .project-info-content .project-btn {
