@@ -6,6 +6,8 @@
 $dark-color: #616161;
 $section-text-size: 1.1rem;
 $section-title-size: 2rem !important;
+$purple-one: rgba(156, 39, 176,0.9);
+$purple-two: rgba(103, 58, 183,0.9);
 
 %section-title-shared {
    position: relative;
@@ -41,7 +43,13 @@ $section-title-size: 2rem !important;
 	padding:0;
 	box-sizing: border-box !important;
    line-height: 1.6;
+   outline: none;
 }
+
+/*html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}*/
 
 body {
 	font-family: 'lato', sans-serif !important;  
@@ -205,55 +213,56 @@ header {
    }
 
    .project {
-      padding: 1rem;
-
+      position: relative;
+      padding:.2rem !important;
+      
       article {
-         position: relative;
          cursor: pointer;
+         position: relative;
          
          .project-img {
             width: 100%;
             height:100%;
          }
 
-         &:hover .project-info-container{
-            transform: translateY(0) !important;
-            visibility: visible;
-            opacity: 1;
-            transition: all .3s;
-         }
-      }
-
-      .project-info-container {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;  
-         background-image: linear-gradient(to right, 
-	      rgba(156, 39, 176,0.9), 
-	      rgba(103, 58, 183,0.9));
-         transform: translateY(10%) !important;
-         visibility: hidden;
-         opacity: 0;
-
-         .project-info-content {
+         .project-info-container {
             position: absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%,-50%);
+            top: 0;
+            left: 0;
             width: 100%;
-            
-            .project-name {
-               font-size: 1.5rem !important;
-            }
+            height: 100%;
+            padding: .3rem;
+            background-image: linear-gradient(to right bottom, rgba(126, 44, 141, 0.9), 
+            rgba(103, 58, 183,0.8));
+            transform: scale(0);
+            transform-origin: top right;
+            transition: all .4s;
+            border-radius: 50rem 0 50rem 50rem;
+            opacity: 0;
 
-            .project-btn {
-               transition: transform .3s;
-               &:hover {
-                  transform: scale(1.1);
+            .project-info-content {
+               .project-name {
+                  font-size: 1.8rem !important;
+               }
+
+               .project-techs {
+                  font-size: .8rem;
+               }
+
+               .project-btn {
+                  transition: all .4s;
+
+                  &:hover {
+                     font-size: 1.1rem !important;
+                  }
                }
             }
+         }
+
+         &:hover .project-info-container {
+            transform: scale(1);
+            border-radius: 0;
+            opacity: 1;
          }
       }
    }
